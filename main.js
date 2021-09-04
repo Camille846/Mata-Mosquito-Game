@@ -19,7 +19,7 @@ function posicaoRandomica(){
 
         // Controlando os pontos de vida
         if(vidas > 3){
-            alert('interrompe o jogo - Game Over')
+            window.location.href = "game_over.html"
         } else{
             document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
             vidas++
