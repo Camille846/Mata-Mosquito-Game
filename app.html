@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Mata Mosquito</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body onresize="ajustaTamanhoPalco()">
     <div class="painel">
@@ -16,6 +17,14 @@
         </div>
         <div class="cronometro">Tempo restante: <span id="cronometro"></span> </div>
     </div>
-    <script src="main.js"></script>
+
+    <script>
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criaMosquito = setInterval(() => {
+            posicaoRandomica()
+        }, criaMosquitoTempo);
+
+    </script>
 </body>
 </html>
