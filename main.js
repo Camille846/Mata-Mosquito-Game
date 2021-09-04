@@ -2,6 +2,7 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 15
 
 function ajustaTamanhoPalco(){
     altura = window.innerHeight
@@ -10,6 +11,19 @@ function ajustaTamanhoPalco(){
 }
 
 ajustaTamanhoPalco()
+
+var cronometro = setInterval(() => {
+    tempo -= 1 
+    
+    if(tempo < 0){
+        clearInterval(cronometro)
+        clearInterval(criaMosquito)
+        alert('vitória')
+    } else{
+    document.getElementById('cronometro').innerHTML = tempo
+    }
+
+}, 1000);
 
 // CRIANDO POSIÇÕES RANDÔMICAS
 function posicaoRandomica(){
@@ -78,8 +92,9 @@ function ladoAleatorio(){
     }
 }
 
+document.getElementById('cronometro').innerHTML = tempo
 // CRIANDO E REMOVENDO MOSQUITOS A CADA CICLO DE TEMPO
-setInterval(() => {
+var criaMosquito = setInterval(() => {
     posicaoRandomica()
-}, 1000);
+}, 2000);
 
