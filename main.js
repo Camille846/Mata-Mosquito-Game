@@ -59,3 +59,8 @@ function ladoAleatorio(){
         
     }
 }
+
+// CRIANDO E REMOVENDO MOSQUITOS A CADA CICLO DE TEMPO
+setInterval(() => {
+    posicaoRandomica()
+}, 1000);
