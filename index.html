@@ -13,10 +13,12 @@
         function iniciarJogo(){
             var nivel = document.getElementById('nivel').value
 
-            if(value === ''){
+            if(nivel === ""){
                 alert('Selecione um nível para iniciar o jogo')
                 return false
             }
+
+            window.location.href = "app.html?" + nivel
         }
     </script>
 </head>
@@ -48,7 +50,7 @@
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()" >Iniciar Jogo</button>
+                    <button type="button" class="btn btn-danger btn-lg" onclick= "iniciarJogo()">Iniciar Jogo</button>
                 </div>
             </div>
         </div>
